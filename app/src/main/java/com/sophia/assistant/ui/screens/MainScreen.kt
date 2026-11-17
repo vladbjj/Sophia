@@ -102,7 +102,7 @@ fun MainScreen(
 ) {
     var inputText by remember { mutableStateOf("") }
     val listState = rememberLazyListState()
-    val focusManager = LocalFocusManager()
+    val focusManager = LocalFocusManager.current
 
     // Auto-scroll para a última mensagem
     LaunchedEffect(messages.size) {
